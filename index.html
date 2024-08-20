@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.10.3</title>
+  </head>
+  <body>
+    <script>
+      let personName = prompt('Введите ваше имя:');
+      let yearOfBirth = prompt('Введите год рождения');
+//Получение года рождения и преобразования обратно в строку - для удобства
+//дальнейшего вычисления.
+      let personAge = (2024 - +yearOfBirth).toString();
+
+      +personAge[personAge.length - 1] === 1
+        ? alert(`${personName}: ${personAge} год.`)
+        : +personAge[personAge.length - 1] >= 2 &&
+          +personAge[personAge.length - 1] <= 4
+        ? alert(`${personName}: ${personAge} года.`)
+        : alert(`${personName}: ${personAge} лет.`);
+    </script>
+  </body>
+</html>
